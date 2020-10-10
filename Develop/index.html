@@ -26,10 +26,22 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <!-- insert current day below via Javascript -->
+      <p id="currentDay" class="lead">Saturday, October 10th</p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+      <!-- time block  -->
+      <div class="time-block row">
+        <!-- hour of the day -->
+        <div class="hour">
+          <p>9:00am</p>
+        </div>
+        <!-- text area to write plan for the hour -->
+        <!-- <div class="description"> -->
+        <textarea name="textArea" class="description" cols='100'></textarea>
+      <!-- </div> -->
+      <!-- save button to add plan to local storage -->
+      <div class="saveBtn">Button</div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

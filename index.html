@@ -38,7 +38,7 @@
         </div>
         <!-- text area to write plan for the hour -->
         <!-- <div class="description"> -->
-        <textarea name="textArea" class="description" cols="100"></textarea>
+        <textarea name="textArea" class="description"></textarea>
         <!-- </div> -->
         <!-- save button to add plan to local storage -->
         <div class="saveBtn">
@@ -53,6 +53,23 @@
       var today = moment();
       console.log(today.format('dddd Do MMMM'));
       $('#currentDay').text(today.format('dddd Do MMMM'));
+      $('.row').clone().attr('id', '10am').appendTo('.container');
+      $('#10am > .hour > p').text('1:00am');
+      $('#10am > textarea').attr('id', 'tenAm');
+      $('#10am > .saveBtn').attr('id', 'saveTenAm');
+      $('.saveBtn').on('click', function () {
+        localStorage.setItem('description', $('.description').val());
+        console.log(localStorage.getItem('description'));
+      });
+      console.log(localStorage.getItem('description'));
+      $('.description').text(localStorage.getItem('description'));
+
+      $('#saveTenAm').on('click', function () {
+        localStorage.setItem('descriptionTenAm', $('#tenAm').val());
+        console.log(localStorage.getItem('descriptionTenAm'));
+      });
+      console.log(localStorage.getItem('descriptionTenAm'));
+      $('#tenAm').text(localStorage.getItem('descriptionTenAm'));
     </script>
   </body>
 </html>

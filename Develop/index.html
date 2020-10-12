@@ -49,5 +49,10 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script>
+      var today = moment();
+      console.log(today.format('dddd Do MMMM'));
+      $('#currentDay').text(today.format('dddd Do MMMM'));
+    </script>
   </body>
 </html>
